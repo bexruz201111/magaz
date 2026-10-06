@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дом Штор — шторы и ткани на заказ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><b>ДОМ ШТОР</b><nav><a href="#catalog">Ткани</a><a href="#prices">Цены</a><a href="#calc">Расчёт</a><a href="#faq">Вопросы</a><a href="#order">Заказ</a></nav></header>
+
+<div class="hero"><div>
+<h1>Шторы, которые превращают дом в уютное пространство</h1>
+<p>Более 200 тканей, пошив на заказ, бесплатный замер и монтаж. Цены — за 1 метр, без скрытых доплат.</p>
+<a class="btn" href="#calc">Рассчитать стоимость</a><a class="btn o" href="#prices">Смотреть цены</a>
+<div class="stats"><div><b>12 лет</b><span>на рынке</span></div><div><b>5 000+</b><span>готовых проектов</span></div><div><b>3 года</b><span>гарантии на пошив</span></div></div>
+</div></div>
+
+<section><div class="wrap">
+<h2>Почему выбирают нас</h2><p class="sub">Делаем так, чтобы вы получили шторы мечты без хлопот</p>
+<div class="grid">
+<div class="feat"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5" transform="rotate(-30 12 12)"/><path d="M7 14.2l1.2-.7M10 12.5l1.2-.7M13 10.8l1.2-.7M16 9.1l1.2-.7" /></svg></i><h3>Бесплатный замер</h3><p>Мастер приедет в удобное время и всё измерит.</p></div>
+<div class="feat"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6M4 20l5-1 10-10-4-4L5 15z"/><path d="M4 20l1-5"/></svg></i><h3>Пошив за 5–7 дней</h3><p>Собственная мастерская и опытные швеи.</p></div>
+<div class="feat"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></i><h3>Доставка и монтаж</h3><p>Привезём, повесим и подгоним по длине.</p></div>
+<div class="feat"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><h3>Гарантия качества</h3><p>Если что-то не понравится — переделаем бесплатно.</p></div>
+</div></div></section>
+
+<section style="background:#fff"><div class="wrap">
+<h2>Наши работы</h2><p class="sub">Интерьеры, в которых живут наши шторы</p>
+<div class="gal">
+<div style="background-image:var(--img1)"><span>Гостиная в светлых тонах</span></div>
+<div style="background-image:var(--img2)"><span>Лёгкий тюль в спальне</span></div>
+<div style="background-image:var(--img3)"><span>Принтованные шторы</span></div>
+</div></div></section>
+
+<section id="catalog"><div class="wrap">
+<h2>Популярные ткани</h2><p class="sub">Цена указана за 1 погонный метр ткани</p>
+<div class="cards" id="cards"></div>
+</div></section>
+
+<section id="prices" style="background:#fff"><div class="wrap">
+<h2>Прайс-лист</h2><p class="sub">Актуальные цены на ткани и пошив</p>
+<div class="tbl"><table>
+<thead><tr><th>Ткань</th><th>Состав</th><th>Ширина рулона</th><th>Цена за 1 м</th></tr></thead>
+<tbody id="rows"></tbody></table></div>
+<p class="sans" style="margin-top:16px;text-align:center;color:#7a6e65">Пошив — от <b id="sew"></b> за погонный метр карниза. Замер и доставка — бесплатно.</p>
+</div></section>
+
+<section id="calc"><div class="wrap two">
+<div class="photo"></div>
+<div>
+<h2 style="text-align:left">Калькулятор стоимости</h2><p class="sub" style="text-align:left">Узнайте примерную цену за 10 секунд</p>
+<div class="calc">
+<label>Ткань<select id="fabric"></select></label>
+<label>Ширина карниза, м<input id="w" type="number" min="0.5" step="0.1" value="2.5"></label>
+<label>Пышность сборки<select id="k"><option value="1.5">Лёгкая (×1.5)</option><option value="2" selected>Классика (×2)</option><option value="2.5">Пышная (×2.5)</option></select></label>
+<label style="display:flex;gap:8px;align-items:center"><input id="s" type="checkbox" checked> Включить пошив</label>
+<div>Ориентировочно: <div class="total" id="out"></div><small class="sans" id="det" style="color:#7a6e65"></small></div>
+</div></div></div></section>
+
+<section style="background:#fff"><div class="wrap">
+<h2>Как мы работаем</h2><p class="sub">Четыре простых шага</p>
+<div class="grid steps">
+<div class="step"><h3>Заявка</h3><p class="sans">Оставляете заявку или звоните нам.</p></div>
+<div class="step"><h3>Замер</h3><p class="sans">Мастер приезжает с образцами тканей.</p></div>
+<div class="step"><h3>Пошив</h3><p class="sans">Шьём за 5–7 рабочих дней.</p></div>
+<div class="step"><h3>Монтаж</h3><p class="sans">Привозим и вешаем шторы.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Отзывы клиентов</h2><p class="sub">Нам доверяют тысячи семей</p>
+<div class="grid">
+<div class="rev"><div class="st">★★★★★</div><p>Заказывали блэкаут в спальню — спим как в отеле. Всё сшито идеально, привезли вовремя.</p><b>Анна К.</b></div>
+<div class="rev"><div class="st">★★★★★</div><p>Помогли подобрать ткань под интерьер. Цена за метр честная, как на сайте.</p><b>Дмитрий С.</b></div>
+<div class="rev"><div class="st">★★★★★</div><p>Лён и тюль в гостиную смотрятся шикарно. Рекомендую всем друзьям.</p><b>Елена М.</b></div>
+</div></div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap" style="max-width:800px">
+<h2>Частые вопросы</h2><p class="sub">Ответы на главное</p>
+<details><summary>Сколько ткани нужно на окно?</summary><p>Ширину карниза умножьте на коэффициент сборки (1.5–2.5). Для окна 2.5 м при классической сборке — около 5 м ткани.</p></details>
+<details><summary>Можно ли взять образцы домой?</summary><p>Да, мастер привезёт образцы на замер, чтобы вы оценили цвет при вашем освещении.</p></details>
+<details><summary>Сколько делается заказ?</summary><p>Обычно 5–7 рабочих дней после утверждения ткани и размеров.</p></details>
+<details><summary>Есть ли рассрочка?</summary><p>Да, возможна оплата частями. Уточняйте у менеджера.</p></details>
+</div></section>
+
+<section id="order" class="cta"><div class="wrap">
+<h2>Закажите бесплатный замер</h2><p class="sub" style="color:#d9cfc6">Перезвоним в течение 15 минут</p>
+<form onsubmit="event.preventDefault();ok.textContent='Спасибо! Мы скоро свяжемся с вами.';this.reset()">
+<input placeholder="Ваше имя" required><input type="tel" placeholder="Телефон" required>
+<textarea rows="3" placeholder="Комментарий (необязательно)"></textarea>
+<button class="btn" type="submit">Отправить заявку</button><div class="ok sans" id="ok"></div>
+</form></div></section>
+
+<footer>
+<p><b style="color:#fff;letter-spacing:.1em">ДОМ ШТОР</b></p>
+<p>Тел.: +7 (900) 000-00-00 · info@domshtor.example · Ежедневно 9:00–20:00</p>
+<p style="margin-top:8px;opacity:.6">Фото: Unsplash (Spl Interiors, Brooke Balentine, Anna Ogiienko) · © 2026 Дом Штор</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
